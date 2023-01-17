@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: rgb(162, 1, 1);
+  margin: 2rem 3rem;
+}
+
+.poke-icon {
+  margin: 2rem 3rem;
+}
+
+.card-list {
+  display: flex;
+  margin: 2rem 3rem;
+}
+
+.card {
+  width: 160px;
+  padding: 2rem;
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=style.css.map */

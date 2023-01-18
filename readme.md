@@ -4,11 +4,11 @@
 + show pokemon cards depend on type selection (default: none -> all cards)
 + event handler: click on type icon (type toggle on/off)
 
-// User can pick one or multiple of the filter options to sort cards in type order.
+// User can pick up to 3 of the filter options to sort cards in type order.
 
 // Layout similar to robofriends:
 - header (white)
-- poketype icons - 'https://archives.bulbagarden.net/wiki/Category:Type_icons'
+- poketype icons (max 3 at once) - 'https://archives.bulbagarden.net/wiki/Category:Type_icons'
 - filter options (tabs)
 - poke cards (color depends of type)
 

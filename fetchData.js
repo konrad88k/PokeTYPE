@@ -1,24 +1,28 @@
 const pokeData = {};
 
 async function fetchData() {
+    // 1-151 : I Generation
+    // - 251 : II Generation
+    // - 386 : III Generation
+    // - 493 : IV Generation
+    // - 649 : V Generation
+    // - 721 : VI Generation
+    // - 809 : VII Generation
+    // - 905 : VIII Generation
+    // - 1008 : IX Generation
     for (let i=1; i<152; i++){
         let data = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
-        let obj = await data.json();
-        let id = obj.id;
-        let name = obj.name;
-        let sprite = obj.sprites.front_default;
-        let type1 = obj.types[0].type.name;
-        let type2 = '-';
-        if (obj.types.length > 1){
-            type2 = obj.types[1].type.name;
-        }
+        let resp = await data.json();
         let pokeObj = {
-            id: id,
-            name: name,
+            id: resp.id,
+            name: resp.name,
             description: '~ description',
-            spriteLink: sprite,
-            type1: type1,
-            type2: type2
+            spriteLink: resp.sprites.front_default,
+            type1: resp.types[0].type.name,
+            type2: null
+        }
+        if (resp.types.length > 1){
+            pokeObj.type2 = resp.types[1].type.name;
         }
         console.log('Utworzony obiekt:', pokeObj);
         // >> dodanie obiektu do puli pokeData{}

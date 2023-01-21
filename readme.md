@@ -21,3 +21,14 @@
 // Build with ES6 + Webpack. - 'https://webpack.js.org/guides/installation/'
 
 // Deploy with GitHub Pages.
+
+---
+    // 1-151 : I Generation
+    // - 251 : II Generation
+    // - 386 : III Generation
+    // - 493 : IV Generation
+    // - 649 : V Generation
+    // - 721 : VI Generation
+    // - 809 : VII Generation
+    // - 905 : VIII Generation
+    // - 1008 : IX Generation

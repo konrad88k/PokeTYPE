@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-$primary-color: rgb(218, 218, 218);
+$primary-color: rgb(230, 227, 227);
 $c: 5%; //card corner
 @mixin polygon {
     -webkit-clip-path: polygon(0 $c, 0 100%-$c,$c 100%, 100%-$c 100%, 100% 100%-$c, 100% $c, 100%-$c 0, $c 0);
@@ -54,27 +54,37 @@ h1 {
     @include polygon;
     display: flex;
     place-content: center center;
-    margin: 1rem;
-    width: 164px;
-    min-height: 164px;
-    background-color: rgb(96, 35, 239);
+    margin: 1rem;   
+    width: 204px;
+    background-color: rgb(54, 54, 67);
     color: $primary-color;
     padding: 3px;
+    cursor: pointer;
+    transition: 0.4s;
 }
 .card div {
     @include polygon;
-    width: 120px;
-    min-height: 120px;
-    padding: 2rem;
-    background-color: rgb(30, 29, 62);
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(31, 31, 59);
     font-family: 'Press Start 2P', cursive;
     font-size: small;
     text-align: center;
 }
+.card:hover {
+    scale: 1.1;
+}
 .card h3 {
     margin: 0 auto;
 }
+.card h3:first-child {
+    text-align: left;
+  }
 .pokeball {
+    width: 100%;
+    object-fit: contain;
+}
+.pokemon-front {
     width: 100%;
     object-fit: contain;
 }
@@ -89,3 +99,13 @@ footer div {
     font-family: 'Press Start 2P', cursive;
     color: $primary-color;
 }
+@media (max-width: 576px) {
+    .card-list {
+        margin-left: 0;
+        margin-right: 0;
+
+    }
+    .card {
+        margin: 16px;
+    }
+  }

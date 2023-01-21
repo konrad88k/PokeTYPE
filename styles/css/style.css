@@ -16,7 +16,7 @@ main {
 h1 {
   margin: 3rem 3rem 1rem 3rem;
   text-align: center;
-  color: rgb(218, 218, 218);
+  color: rgb(230, 227, 227);
   font-family: "Press Start 2P", cursive;
 }
 
@@ -59,30 +59,43 @@ h1 {
   display: flex;
   place-content: center center;
   margin: 1rem;
-  width: 164px;
-  min-height: 164px;
-  background-color: rgb(96, 35, 239);
-  color: rgb(218, 218, 218);
+  width: 204px;
+  background-color: rgb(54, 54, 67);
+  color: rgb(230, 227, 227);
   padding: 3px;
+  cursor: pointer;
+  transition: 0.4s;
 }
 
 .card div {
   -webkit-clip-path: polygon(0 5%, 0 95%, 5% 100%, 95% 100%, 100% 95%, 100% 5%, 95% 0, 5% 0);
   clip-path: polygon(0 5%, 0 95%, 5% 100%, 95% 100%, 100% 95%, 100% 5%, 95% 0, 5% 0);
-  width: 120px;
-  min-height: 120px;
-  padding: 2rem;
-  background-color: rgb(30, 29, 62);
+  width: 100%;
+  padding: 1rem;
+  background-color: rgb(31, 31, 59);
   font-family: "Press Start 2P", cursive;
   font-size: small;
   text-align: center;
+}
+
+.card:hover {
+  scale: 1.1;
 }
 
 .card h3 {
   margin: 0 auto;
 }
 
+.card h3:first-child {
+  text-align: left;
+}
+
 .pokeball {
+  width: 100%;
+  object-fit: contain;
+}
+
+.pokemon-front {
   width: 100%;
   object-fit: contain;
 }
@@ -97,7 +110,17 @@ footer {
 footer div {
   text-align: center;
   font-family: "Press Start 2P", cursive;
-  color: rgb(218, 218, 218);
+  color: rgb(230, 227, 227);
+}
+
+@media (max-width: 576px) {
+  .card-list {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .card {
+    margin: 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

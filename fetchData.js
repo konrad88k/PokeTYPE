@@ -11,12 +11,11 @@ async function fetchData() {
     // - 905 : VIII Generation
     // - 1008 : IX Generation
     for (let i=1; i<152; i++){
-        let data = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
-        let resp = await data.json();
+        let data1 = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
+        let resp = await data1.json();
         let pokeObj = {
             id: resp.id,
             name: resp.name,
-            description: '~ description',
             spriteLink: resp.sprites.front_default,
             type1: resp.types[0].type.name,
             type2: null

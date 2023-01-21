@@ -16,7 +16,7 @@
 // All pokemons displays as a cards with:
 1. "https://pokeapi.co/api/v2/pokemon/{id}/" -> sprites -> front_default.png'
 2. id + name
-3. Pokemon -> Characteristic -> description: ex. 'Loves to eat'
+3. [optional] Pokemon -> Characteristic -> description: ex. 'Loves to eat' | works only for first 30 pokemons
 
 // Build with ES6 + Webpack. - 'https://webpack.js.org/guides/installation/'
 

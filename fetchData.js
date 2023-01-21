@@ -1,29 +1,25 @@
-const pokeData = {};
-
-async function fetchData() {
-    // 1-151 : I Generation
-    // - 251 : II Generation
-    // - 386 : III Generation
-    // - 493 : IV Generation
-    // - 649 : V Generation
-    // - 721 : VI Generation
-    // - 809 : VII Generation
-    // - 905 : VIII Generation
-    // - 1008 : IX Generation
-    for (let i=1; i<152; i++){
-        let data1 = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
-        let resp = await data1.json();
-        let pokeObj = {
-            id: resp.id,
-            name: resp.name,
-            spriteLink: resp.sprites.front_default,
-            type1: resp.types[0].type.name,
-            type2: null
+const pokeDataArr = [];
+const fetchData = async function() {
+    try {
+        for (let i=1; i<=151; i++){
+            let data1 = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
+            let resp = await data1.json();
+            let pokeObj = {
+                id: resp.id,
+                name: resp.name,
+                spriteLink: resp.sprites.front_default,
+                type1: resp.types[0].type.name,
+                type2:(resp.types.length > 1 ? resp.types[1].type.name : null)
+            }
+            console.log('Pokemon:', pokeObj);
+            // const pokeArr = Object.keys(pokeObj); // Obj to Arr
+            pokeDataArr.push(pokeObj);
         }
-        if (resp.types.length > 1){
-            pokeObj.type2 = resp.types[1].type.name;
-        }
-        console.log('Utworzony obiekt:', pokeObj);
-        // >> dodanie obiektu do puli pokeData{}
+    } catch(err) {
+        console.log("Oops!", err);
+    }
+    finally {
+        console.log('OUTPUT:', pokeDataArr);
     }
 }
+fetchData();

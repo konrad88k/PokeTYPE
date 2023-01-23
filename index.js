@@ -1,6 +1,14 @@
 // import fetchData from "./fetchData";
 // import displayCards from "./displayCards";
 
+const tab = document.querySelectorAll(".tab");
+for (let i = 0 ; i < tab.length; i++) {
+    tab[i].addEventListener('click' , (event)=> {
+        console.log(event.target.id.slice(0,-4));
+        console.log("Click!", event)
+    });
+}
+
 const pokeDataArr = [];
 function addCard(el) {
     const cardList = document.querySelector('.card-list');

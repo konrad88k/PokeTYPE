@@ -16,7 +16,7 @@
 // All pokemons displays as a cards with:
 1. "https://pokeapi.co/api/v2/pokemon/{id}/" -> sprites -> front_default.png'
 2. id + name
-3. [optional] Pokemon -> Characteristic -> description: ex. 'Loves to eat' | works only for first 30 pokemons
+3. [optional] Pokemon -> Characteristic -> description: ex. 'Loves to eat' | (max 30)
 
 // Build with ES6 + Webpack. - 'https://webpack.js.org/guides/installation/'
 
@@ -29,6 +29,6 @@
     // - 493 : IV Generation
     // - 649 : V Generation
     // - 721 : VI Generation
-    // - 809 : VII Generation
+    // - 809 : VII Generation <-last with spriteLinks
     // - 905 : VIII Generation
     // - 1008 : IX Generation

@@ -2,12 +2,14 @@
 // import displayCards from "./displayCards";
 
 const tab = document.querySelectorAll(".tab");
-for (let i = 0 ; i < tab.length; i++) {
-    tab[i].addEventListener('click' , (event)=> {
-        console.log(event.target.id.slice(0,-4));
+for (let i = 0; i < tab.length; i++) {
+    tab[i].addEventListener('click', (event) => {
+        console.log(event.target.id.slice(0, -4));
         console.log("Click!", event)
     });
 }
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 const pokeDataArr = [];
 function addCard(el) {
@@ -30,9 +32,9 @@ function addCard(el) {
     card.appendChild(cardDiv)
     cardList.appendChild(card);
 }
-const fetchData = async function() {
+const fetchData = async function () {
     try {
-        for (let i=1; i<=385; i++){
+        for (let i = 1; i <= 385; i++) {
             let data1 = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
             let resp = await data1.json();
             let pokeObj = {
@@ -40,13 +42,13 @@ const fetchData = async function() {
                 name: resp.name,
                 spriteLink: resp.sprites.front_default,
                 type1: resp.types[0].type.name,
-                type2:(resp.types.length > 1 ? resp.types[1].type.name : null)
+                type2: (resp.types.length > 1 ? resp.types[1].type.name : null)
             }
             pokeDataArr.push(pokeObj);
             await addCard(pokeObj);
             // console.log('Pokemon:', pokeObj);
         }
-    } catch(err) {
+    } catch (err) {
         console.log("Oops!", err);
     }
     finally {

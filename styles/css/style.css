@@ -21,7 +21,7 @@ h1 {
 }
 
 .poke-icon-wrapper {
-  margin: 2rem 3rem;
+  margin: 2rem 3rem 1rem 3rem;
   display: flex;
   place-content: center center;
 }
@@ -34,16 +34,30 @@ h1 {
 
 .tabs-wrapper {
   margin: 1rem auto;
-  max-width: 650px;
+  max-width: 540px;
   display: flex;
   place-content: center center;
   flex-wrap: wrap;
 }
 
-.tabs-wrapper img {
-  margin: 4px;
+.tab {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 6px;
   width: 64px;
+  height: 22px;
   cursor: pointer;
+  transition: scale 0.3s ease-in-out;
+  transition: border 0.2s;
+}
+
+.tab:hover {
+  scale: 1.1;
+}
+
+.tab:active {
+  border: 2px solid rgb(255, 234, 3);
 }
 
 .card-list {
@@ -64,7 +78,7 @@ h1 {
   color: rgb(230, 227, 227);
   padding: 3px;
   cursor: pointer;
-  transition: 0.4s;
+  transition: scale 0.4s;
 }
 
 .card div {

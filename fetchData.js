@@ -1,7 +1,10 @@
-const pokeDataArr = [];
-const fetchData = async function() {
+import newCard from "./newCard.js";
+
+export const pokeArr = [];
+
+const fetchData = async function () {
     try {
-        for (let i=1; i<=151; i++){
+        for (let i = 1; i <= 386; i++) {
             let data1 = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
             let resp = await data1.json();
             let pokeObj = {
@@ -9,17 +12,15 @@ const fetchData = async function() {
                 name: resp.name,
                 spriteLink: resp.sprites.front_default,
                 type1: resp.types[0].type.name,
-                type2:(resp.types.length > 1 ? resp.types[1].type.name : null)
+                type2: (resp.types.length > 1 ? resp.types[1].type.name : null)
             }
-            console.log('Pokemon:', pokeObj);
-            // const pokeArr = Object.keys(pokeObj); // Obj to Arr
-            pokeDataArr.push(pokeObj);
+            pokeArr.push(pokeObj);
         }
-    } catch(err) {
-        console.log("Oops!", err);
+    } catch (err) {
+        console.log("Oops! Error:", err);
     }
     finally {
-        console.log('OUTPUT:', pokeDataArr);
+        console.log("fetchData end!");
     }
 }
-fetchData();
+export default fetchData;

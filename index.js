@@ -1,5 +1,4 @@
-// import fetchData from "./fetchData";
-// import displayCards from "./displayCards";
+//import
 
 const tab = document.querySelectorAll(".tab");
 for (let i = 0; i < tab.length; i++) {
@@ -9,9 +8,6 @@ for (let i = 0; i < tab.length; i++) {
     });
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-const pokeDataArr = [];
 function addCard(el) {
     const cardList = document.querySelector('.card-list');
     const card = document.createElement("div");
@@ -32,6 +28,7 @@ function addCard(el) {
     card.appendChild(cardDiv)
     cardList.appendChild(card);
 }
+
 const fetchData = async function () {
     try {
         for (let i = 1; i <= 385; i++) {
@@ -44,9 +41,7 @@ const fetchData = async function () {
                 type1: resp.types[0].type.name,
                 type2: (resp.types.length > 1 ? resp.types[1].type.name : null)
             }
-            pokeDataArr.push(pokeObj);
-            await addCard(pokeObj);
-            // console.log('Pokemon:', pokeObj);
+            addCard(pokeObj);
         }
     } catch (err) {
         console.log("Oops!", err);
@@ -55,4 +50,5 @@ const fetchData = async function () {
         console.log('fetchData end!');
     }
 }
+
 fetchData();

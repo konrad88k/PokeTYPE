@@ -60,7 +60,7 @@ h1 {
 }
 
 .card-list {
-  margin: 2rem 3rem;
+  margin: 2rem 3rem 6rem 3rem;
   display: flex;
   place-content: center center;
   flex-wrap: wrap;
@@ -104,8 +104,14 @@ h1 {
 }
 
 .pokeball {
-  width: 100%;
+  display: flex;
+  place-content: center center;
+  margin: 0;
   object-fit: contain;
+}
+
+.pokeball img {
+  width: 160px;
 }
 
 .pokemon-front {
@@ -114,8 +120,11 @@ h1 {
 }
 
 footer {
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
   display: flex;
-  place-content: center center;
+  justify-content: center;
   padding: 2rem 1rem;
   background-color: rgb(27, 27, 37);
 }
@@ -127,6 +136,11 @@ footer div {
 }
 
 @media (max-width: 576px) {
+  ::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
   .card-list {
     margin-left: 0;
     margin-right: 0;

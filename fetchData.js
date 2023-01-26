@@ -21,6 +21,7 @@ const fetchData = async function () {
     }
     finally {
         console.log("fetchData end!");
+        console.log("Numbers of pokemons:", pokeArr.length);
     }
 }
 export default fetchData;

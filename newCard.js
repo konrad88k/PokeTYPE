@@ -1,6 +1,7 @@
 const newCard = (el) => {
 
     const cardList = document.querySelector('.card-list');
+
     const card = document.createElement("div");
     const cardDiv = document.createElement("div");
     const id = document.createElement("h3");

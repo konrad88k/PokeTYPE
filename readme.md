@@ -25,6 +25,7 @@
 // Deploy with GitHub Pages.
 
 ---
+    Generations of pokemons:
     // 1-151 : I Generation
     // - 251 : II Generation
     // - 386 : III Generation

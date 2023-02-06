@@ -23,6 +23,14 @@ const loadList = (a, b) => {
     for (let element of filter(a, b)) {
         newCard(element);
     }
+
+    if (filter(a, b).length === 0) {
+        const cardList = document.querySelector('.card-list');
+        const noCardsText = document.createElement("h4");
+        noCardsText.className = "no-cards-text";
+        noCardsText.innerHTML = "There is no pokemon of&nbsp;this&nbsp;type.";
+        cardList.appendChild(noCardsText);
+    }
 }
 
 export default loadList;

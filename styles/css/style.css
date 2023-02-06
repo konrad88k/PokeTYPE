@@ -119,6 +119,14 @@ h1 {
   object-fit: contain;
 }
 
+.no-cards-text {
+  text-align: center;
+  color: rgb(230, 227, 227);
+  font-family: "Press Start 2P", cursive;
+  line-height: 2em;
+  margin-bottom: 1.5rem;
+}
+
 footer {
   position: fixed;
   width: 100%;

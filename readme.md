@@ -14,7 +14,7 @@
 - filter options (tabs)
 - poke cards list (depends of type and generation)
 - footer (fixed position)
-- arrow - page up (absolute position)
+- arrow - page up (absolute position, visibility over 200vh)
 
 // All pokemons displays as a cards with:
 1. "https://pokeapi.co/api/v2/pokemon/{id}/" -> sprites -> front_default.png'

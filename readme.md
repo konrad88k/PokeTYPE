@@ -1,22 +1,22 @@
 # [>> PokeTYPE <<](https://poke-type.netlify.app)
 
-// In-app features:
+// In-app functions:
 + fetch data from PokeAPI (id, image, name, description, type) - 'https://pokeapi.co/docs/v2'
-+ single pokemon card (id, image, name)
-+ show pokemon cards depend on type selection (default: none -> all cards)
-+ event handler: click on type icon - type toggle on/off (max 2)
++ create pokemon card list
++ show cards depend on type selection (if no tab selected show all cards)
++ choose pokemon type - toggle on/off (max 2)
 
 // User can pick up to 2 of the filter options to sort cards in type order.
 
 // Layout similar to robofriends:
 - header (PokeTYPE)
 - poketype icons - 'https://archives.bulbagarden.net/wiki/Category:Type_icons'
-- some graphic (eg. pikachu)
+- some pokemon graphics (eg. pikachu)
 - generation tabs (I/II/III)
 - filter options (tabs)
 - poke cards list (depends of type and generation)
 - footer (fixed position)
-- arrow - page up (absolute position, visibility over 200vh)
+- page up button (absolute position, visibility from 150vh scroll)
 
 // All pokemons displays as a cards with:
 1. "https://pokeapi.co/api/v2/pokemon/{id}/" -> sprites -> front_default.png'

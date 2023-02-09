@@ -1,4 +1,4 @@
-#[>> PokeTYPE <<](https://poke-type.netlify.app)
+# [>> PokeTYPE <<](https://poke-type.netlify.app)
 
 // In-app features:
 + fetch data from PokeAPI (id, image, name, description, type) - 'https://pokeapi.co/docs/v2'

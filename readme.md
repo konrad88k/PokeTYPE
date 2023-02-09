@@ -1,3 +1,5 @@
+#[>> PokeTYPE <<](https://poke-type.netlify.app)
+
 // In-app features:
 + fetch data from PokeAPI (id, image, name, description, type) - 'https://pokeapi.co/docs/v2'
 + single pokemon card (id, image, name)
@@ -33,7 +35,7 @@
     // - 493 : IV Generation
     // - 649 : V Generation
     // - 721 : VI Generation
-    // - 809 : VII Generation <-last with spriteLinks
-    // - 905 : VIII Generation
-    // - 1008 : IX Generation
+    // - 809 : VII Generation 
+    // - 905 : VIII Generation <-- no sprites
+    // - 1008 : IX Generation <-- no sprites
 ---

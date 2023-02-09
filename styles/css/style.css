@@ -12,6 +12,12 @@ body {
   background-color: rgb(30, 30, 43);
 }
 
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 .pageup {
   width: 64px;
   height: 64px;

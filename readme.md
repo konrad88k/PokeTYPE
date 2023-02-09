@@ -5,6 +5,7 @@
 + create pokemon card list
 + show cards depend on type selection (if no tab selected show all cards)
 + choose pokemon type - toggle on/off (max 2)
++ click on card -> flip it and show flavor text on the back - 'https://pokeapi.co/api/v2/pokemon-species/'
 
 // User can pick up to 2 of the filter options to sort cards in type order.
 

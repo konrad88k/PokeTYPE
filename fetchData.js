@@ -4,7 +4,7 @@ export const pokeArr = [];
 
 const fetchData = async function () {
     try {
-        for (let i = 1; i <= 386; i++) {
+        for (let i = 1; i <= 251; i++) {
             let data1 = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
             let resp = await data1.json();
             let pokeObj = {

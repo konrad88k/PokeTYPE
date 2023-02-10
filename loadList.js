@@ -28,7 +28,7 @@ const loadList = (a, b) => {
         const cardList = document.querySelector('.card-list');
         const noCardsText = document.createElement("h4");
         noCardsText.className = "no-cards-text";
-        noCardsText.innerHTML = "There is no pokemon of&nbsp;this&nbsp;type.";
+        noCardsText.innerHTML = "no results";
         cardList.appendChild(noCardsText);
     }
 }

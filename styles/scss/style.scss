@@ -102,7 +102,7 @@ h1 {
     color: $primary-color;
     padding: 3px;
     cursor: pointer;
-    transition: scale 0.4s;
+    transition: scale 0.2s;
 }
 .card div {
     @include polygon;

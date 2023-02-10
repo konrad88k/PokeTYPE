@@ -1,6 +1,6 @@
-### work in progress..
-
 # [>> PokeTYPE <<](https://poke-type.netlify.app)
+
+## Work in progress..
 
 User can pick up to 2 of the filter options to sort cards in type order.
 

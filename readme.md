@@ -4,24 +4,24 @@
 
 User can pick up to 2 of the filter options to sort cards in type order.
 
-// In-app functions:
+// In-app functions
 + fetch data from PokeAPI (id, image, name, description, type) - 'https://pokeapi.co/docs/v2'
 + create pokemon card list
 + show cards depend on type selection (if no tab selected show all cards)
 + choose pokemon type - toggle on/off (max 2)
-+ click on card -> flip it and show flavor text on the back - 'https://pokeapi.co/api/v2/pokemon-species/'
++ [to do] click on card -> flip it and show flavor text on the back - 'https://pokeapi.co/api/v2/pokemon-species/'
 
-// Layout similar to robofriends:
+// Layout
 - header (PokeTYPE)
-- poketype icons - 'https://archives.bulbagarden.net/wiki/Category:Type_icons'
+- [to do] poketype icons - 'https://archives.bulbagarden.net/wiki/Category:Type_icons'
 - some pokemon graphics (eg. pikachu)
-- generation tabs (I/II/III)
+- [to do] generation tabs (I/II/III)
 - filter options (tabs)
 - poke cards list (depends of type and generation)
 - footer (fixed position)
-- page up button (absolute position, visibility from 150vh scroll)
+- page up button (absolute position)
 
-// All pokemons displays as a cards with:
+// Single pokemon card
 1. "https://pokeapi.co/api/v2/pokemon/{id}/" -> sprites -> front_default.png'
 2. id + name
 3. [optional] Pokemon -> Characteristic -> description: ex. 'Loves to eat' | (max 30)

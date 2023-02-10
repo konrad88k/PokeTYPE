@@ -50,7 +50,7 @@ main {
 }
 
 h1 {
-  margin: 3rem 3rem 1rem 3rem;
+  margin: 3rem 0 1rem 0;
   text-align: center;
   color: rgb(230, 227, 227);
   font-family: "Press Start 2P", cursive;
@@ -113,7 +113,7 @@ h1 {
   color: rgb(230, 227, 227);
   padding: 3px;
   cursor: pointer;
-  transition: scale 0.4s;
+  transition: scale 0.2s;
 }
 
 .card div {

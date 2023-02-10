@@ -22,9 +22,22 @@ const pickType = function () {
             } else if (toggleCount < 2) {
                 event.target.classList.add("tab-border");
                 typeA ? typeB = trg : typeA = trg;
-                ;
                 toggleCount += 1;
             }
+
+            //shading and unshading tabs 
+            if (toggleCount === 2) {
+                for (let item of tab) {
+                    if ((item.id.slice(0, -4) != typeA) && (item.id.slice(0, -4) != typeB)) {
+                        item.style.opacity = "0.5";
+                    }
+                }
+            } else if (toggleCount < 2) {
+                for (let item of tab) {
+                    item.style.opacity = "1";
+                }
+            }
+
             loadList(typeA, typeB);
         });
     }

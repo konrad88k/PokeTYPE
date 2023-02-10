@@ -1,4 +1,8 @@
+### work in progress..
+
 # [>> PokeTYPE <<](https://poke-type.netlify.app)
+
+User can pick up to 2 of the filter options to sort cards in type order.
 
 // In-app functions:
 + fetch data from PokeAPI (id, image, name, description, type) - 'https://pokeapi.co/docs/v2'
@@ -6,8 +10,6 @@
 + show cards depend on type selection (if no tab selected show all cards)
 + choose pokemon type - toggle on/off (max 2)
 + click on card -> flip it and show flavor text on the back - 'https://pokeapi.co/api/v2/pokemon-species/'
-
-// User can pick up to 2 of the filter options to sort cards in type order.
 
 // Layout similar to robofriends:
 - header (PokeTYPE)

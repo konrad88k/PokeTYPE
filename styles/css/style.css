@@ -87,6 +87,10 @@ h1 {
   transition: scale 0.3s ease-in-out;
 }
 
+.hide {
+  display: none;
+}
+
 .tab:hover {
   scale: 1.1;
 }

@@ -11,21 +11,38 @@ $c: 5%; //card corner
 }
 html {
     scroll-behavior: smooth;
+    overflow-y: overlay;
 }
 body {
     background-color: rgb(30, 30, 43);
 }
+// SCROLLBAR
+/* width */
 ::-webkit-scrollbar {
-    display: none;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    position: absolute;
+    width: 12px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+position: absolute;
+background: rgb(27, 27, 37); 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+position: absolute;
+background: rgb(213, 211, 211); 
+border-radius: 20px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: rgba(230, 227, 227, 0.6);
 }
 .pageup {
     width: 64px;
     height: 64px;
     position: fixed;
-    right: 1.5rem;
-    bottom: 6.5rem;
+    right: calc(1.5rem + 12px);
+    bottom: 5.4rem;
     z-index: 2;
     background-color: rgb(27, 27, 37);
     border-radius: 50%;
@@ -151,7 +168,7 @@ footer {
     bottom: 0;
     display: flex;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     background-color: rgb(27, 27, 37);
 }
 footer div {
@@ -160,11 +177,11 @@ footer div {
     color: $primary-color;
 }
 @media (max-width: 576px) {
-    ::-webkit-scrollbar {
-        display: none;
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-      }
+    // ::-webkit-scrollbar {
+    //     display: none;
+    //     -ms-overflow-style: none; /* IE and Edge */
+    //     scrollbar-width: none; /* Firefox */
+    // }
     .card-list {
         margin-left: 0;
         margin-right: 0;

@@ -238,6 +238,9 @@ footer div {
   }
 }
 @media (max-width: 538px) {
+  .tabs-wrapper {
+    max-width: 420px;
+  }
   .card {
     margin: 2px;
     padding: 1px;
@@ -253,6 +256,30 @@ footer div {
   .pokemon-front {
     margin-top: -6px;
     margin-bottom: -4px;
+  }
+}
+@media (max-width: 410px) {
+  main {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .card-list {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .card {
+    margin: 2px;
+    padding: 1px;
+    width: 87px;
+    height: 100px;
+  }
+  .pokemon-front {
+    width: 64px;
+    margin-top: 0px;
+    margin-bottom: -1px;
+  }
+  .card h3 {
+    font-size: 7px;
   }
 }
 

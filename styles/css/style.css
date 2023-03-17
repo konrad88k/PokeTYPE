@@ -202,13 +202,53 @@ footer div {
   color: rgb(230, 227, 227);
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1338px) {
+  .card {
+    margin: 0.5rem;
+  }
+}
+@media (max-width: 1096px) {
   .card-list {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .card {
-    margin: 16px;
+    width: 136px;
+    height: 156.3px;
+  }
+  .card div {
+    padding: 12px;
+  }
+  .pokemon-front {
+    width: fit-content;
+  }
+  .card h3 {
+    margin-top: 4px;
+    font-weight: 200;
+    font-size: 11px;
+  }
+}
+@media (max-width: 696px) {
+  .tabs-wrapper {
+    max-width: 528px;
+  }
+}
+@media (max-width: 538px) {
+  .card {
+    margin: 2px;
+    padding: 1px;
+    width: 108.8px;
+    height: 125px;
+  }
+  .card div {
+    padding: 6px;
+  }
+  .card h3 {
+    font-size: 8px;
+  }
+  .pokemon-front {
+    margin-top: -6px;
+    margin-bottom: -4px;
   }
 }
 

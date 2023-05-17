@@ -1,4 +1,4 @@
-function scrollFunction() {
+function scroll() {
     window.onscroll = () => {
         // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
         if (document.documentElement.scrollTop > 640) {
@@ -8,4 +8,4 @@ function scrollFunction() {
         }
     }
 }
-export default scrollFunction;
+export default scroll;

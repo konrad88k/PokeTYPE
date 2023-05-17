@@ -1,16 +1,12 @@
-import loadingScreen from "./loadingScreen.js"
+import createLoader from "./createLoader.js"
 import fetchData from "./fetchData.js";
 import pickType from "./pickType.js";
 import loadList from "./loadList.js";
-import scrollFunction from "./scroll.js";
+import scroll from "./scroll.js";
 
-async function pokeType() {
-    loadingScreen();
-    await fetchData();
-    document.querySelector('.card-list').replaceChildren(); //clear card list
-    loadList(null, null); //pelna lista
-    scrollFunction();
-    pickType();
-}
-
-pokeType();
+fetchData();
+loadList(null, null); //pelna lista
+//clear card list
+// document.querySelector('.card-list').replaceChildren();
+scroll();
+pickType();

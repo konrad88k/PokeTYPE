@@ -1,8 +1,6 @@
-import newCard from "./newCard.js";
-
 export const pokeArr = [];
 
-const fetchData = async function () {
+async function fetchData() {
     try {
         for (let i = 1; i <= 251; i++) {
             let data1 = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
@@ -17,11 +15,10 @@ const fetchData = async function () {
             pokeArr.push(pokeObj);
         }
     } catch (err) {
-        console.log("Oops! Error:", err);
+        console.log("[fetchData] Error:", err);
     }
     finally {
-        console.log("fetchData end!");
-        console.log("Numbers of pokemons:", pokeArr.length);
+        console.log("Data count:", pokeArr.length);
     }
 }
 export default fetchData;

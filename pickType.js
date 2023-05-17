@@ -6,7 +6,7 @@ let toggleCount = 0;
 let typeA = null;
 let typeB = null;
 
-const pickType = function () {
+function pickType() {
     for (let i = 0; i < tab.length; i++) {
         tab[i].addEventListener('click', (event) => {
             const trg = event.target.id.slice(0, -4)

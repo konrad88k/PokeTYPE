@@ -1,258 +1,282 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 $primary-color: rgb(230, 227, 227);
 $c: 5%; //card corner
 @mixin polygon {
-    -webkit-clip-path: polygon(0 $c, 0 100%-$c,$c 100%, 100%-$c 100%, 100% 100%-$c, 100% $c, 100%-$c 0, $c 0);
-    clip-path: polygon(0 $c, 0 100%-$c,$c 100%, 100%-$c 100%, 100% 100%-$c, 100% $c, 100%-$c 0, $c 0);
+  -webkit-clip-path: polygon(
+    0 $c,
+    0 100%-$c,
+    $c 100%,
+    100%-$c 100%,
+    100% 100%-$c,
+    100% $c,
+    100%-$c 0,
+    $c 0
+  );
+  clip-path: polygon(
+    0 $c,
+    0 100%-$c,
+    $c 100%,
+    100%-$c 100%,
+    100% 100%-$c,
+    100% $c,
+    100%-$c 0,
+    $c 0
+  );
 }
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 html {
-    scroll-behavior: smooth;
-    overflow-y: overlay;
+  scroll-behavior: smooth;
+  overflow-y: overlay;
 }
 body {
-    background-color: rgb(30, 30, 43);
+  background-color: rgb(30, 30, 43);
 }
 // SCROLLBAR
 /* width */
 ::-webkit-scrollbar {
-    position: absolute;
-    width: 12px;
+  position: absolute;
+  width: 12px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-position: absolute;
-background: rgb(27, 27, 37); 
+  position: absolute;
+  background: rgb(27, 27, 37);
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-position: absolute;
-background: rgb(213, 211, 211); 
-border-radius: 20px;
+  position: absolute;
+  background: rgb(213, 211, 211);
+  border-radius: 20px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-background: rgba(230, 227, 227, 0.6);
+  background: rgba(230, 227, 227, 0.6);
 }
 .pageup {
-    width: 64px;
-    height: 64px;
-    position: fixed;
-    right: calc(1.5rem + 12px);
-    bottom: 5.4rem;
-    z-index: 2;
-    background-color: rgb(27, 27, 37);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  right: calc(1.5rem + 12px);
+  bottom: 5.4rem;
+  z-index: 2;
+  background-color: rgb(27, 27, 37);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
 }
 .pageup:hover {
-    opacity: 50%;
+  opacity: 50%;
 }
 .arrow {
-    position: relative;
-    width: 60%;
-    height: 60%;
-    filter: invert(100%) sepia(0%) saturate(5557%) hue-rotate(146deg) brightness(88%) contrast(105%);
+  position: relative;
+  width: 60%;
+  height: 60%;
+  filter: invert(100%) sepia(0%) saturate(5557%) hue-rotate(146deg)
+    brightness(88%) contrast(105%);
 }
 main {
-    margin-left: 1rem;
-    margin-right: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 h1 {
-    margin: 3rem 0 1rem 0;
-    text-align: center;
-    color: $primary-color;
-    font-family: 'Press Start 2P', cursive;
+  margin: 3rem 0 1rem 0;
+  text-align: center;
+  color: $primary-color;
+  font-family: "Press Start 2P", cursive;
+}
+#pikachu_container {
+  display: flex;
+  place-content: center center;
+  transform: translateX(12px);
 }
 .poke-icon-wrapper {
-    margin: 2rem 3rem 1rem 3rem;
-    display: flex;
-    place-content: center center;
+  margin: 2rem 3rem 1rem 3rem;
+  display: flex;
+  place-content: center center;
 }
 .poke-icon {
-    margin: 0 0.5rem;
-    width: 3rem;
-    display: block;
+  margin: 0 0.5rem;
+  width: 3rem;
+  display: block;
 }
 .tabs-wrapper {
-    margin: 1rem auto;
-    max-width: 540px;
-    display: flex;
-    place-content: center center;
-    flex-wrap: wrap;
+  margin: 1rem auto;
+  max-width: 540px;
+  display: flex;
+  place-content: center center;
+  flex-wrap: wrap;
 }
 .tab {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    margin: 6px;
-    width: 64px;
-    height: 22px;
-    cursor: pointer;
-    transition: scale 0.3s ease-in-out;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 6px;
+  width: 64px;
+  height: 22px;
+  cursor: pointer;
+  transition: scale 0.3s ease-in-out;
 }
 .hide {
-    display: none;
+  display: none;
 }
 .tab:hover {
-    scale: 1.1;
+  scale: 1.1;
 }
 .tab-border {
-    border: 2px solid rgb(255, 234, 3);
+  border: 2px solid rgb(255, 234, 3);
 }
 .card-list {
-    margin: 2rem 3rem 6rem 3rem;
-    display: flex;
-    place-content: center center;
-    flex-wrap: wrap;
+  margin: 2rem 3rem 6rem 3rem;
+  display: flex;
+  place-content: center center;
+  flex-wrap: wrap;
 }
 .card {
-    @include polygon;
-    display: flex;
-    place-content: center center;
-    margin: 1rem;   
-    width: 204px;
-    background-color: rgb(54, 54, 67);
-    color: $primary-color;
-    padding: 3px;
-    cursor: pointer;
-    transition: scale 0.2s;
+  @include polygon;
+  display: flex;
+  place-content: center center;
+  margin: 1rem;
+  width: 204px;
+  background-color: rgb(54, 54, 67);
+  color: $primary-color;
+  padding: 3px;
+  cursor: pointer;
+  transition: scale 0.2s;
 }
 .card div {
-    @include polygon;
-    width: 100%;
-    padding: 1rem;
-    background-color: rgb(31, 31, 59);
-    font-family: 'Press Start 2P', cursive;
-    font-size: small;
-    text-align: center;
+  @include polygon;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgb(31, 31, 59);
+  font-family: "Press Start 2P", cursive;
+  font-size: small;
+  text-align: center;
 }
 .card:hover {
-    scale: 1.1;
+  scale: 1.1;
 }
 .card h3 {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 .card h3:first-child {
-    text-align: left;
-  }
+  text-align: left;
+}
 .pokeball {
-    display: flex;
-    place-content: center center;
-    margin: 0;
-    object-fit: contain;
+  display: flex;
+  place-content: center center;
+  margin: 0;
+  object-fit: contain;
 }
 .pokeball img {
-    width: 160px;
+  width: 160px;
 }
 .pokemon-front {
-    width: 100%;
-    object-fit: contain;
+  width: 100%;
+  object-fit: contain;
 }
 .no-cards-text {
-    text-align: center;
-    color: $primary-color;
-    font-family: 'Press Start 2P', cursive;
-    line-height: 2em;
-    margin-bottom: 1.5rem;
+  text-align: center;
+  color: $primary-color;
+  font-family: "Press Start 2P", cursive;
+  line-height: 2em;
+  margin-bottom: 1.5rem;
 }
 footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    padding: 1.5rem 0;
-    background-color: rgb(27, 27, 37);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0;
+  background-color: rgb(27, 27, 37);
 }
 footer div {
-    text-align: center;
-    font-family: 'Press Start 2P', cursive;
-    color: $primary-color;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  color: $primary-color;
 }
 @media (max-width: 1338px) {
-    .card {
-        margin: 0.5rem;
-    }
+  .card {
+    margin: 0.5rem;
+  }
 }
 @media (max-width: 1096px) {
-    .card-list {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    .card {
-        width: 136px;
-        height: 156.3px;
-    }
-    .card:hover {
-        scale: 1;
-        opacity: 0.8;
-    }
-    .card div {
-        padding: 12px;
-    }
-    .pokemon-front {
-        width: fit-content; 
-    }
-    .card h3 {
-        margin-top: 4px;
-        font-weight: 200;
-        font-size: 11px;
-    }
+  .card-list {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .card {
+    width: 136px;
+    height: 156.3px;
+  }
+  .card:hover {
+    scale: 1;
+    opacity: 0.8;
+  }
+  .card div {
+    padding: 12px;
+  }
+  .pokemon-front {
+    width: fit-content;
+  }
+  .card h3 {
+    margin-top: 4px;
+    font-weight: 200;
+    font-size: 11px;
+  }
 }
 @media (max-width: 696px) {
-    .tabs-wrapper {
-        max-width: 528px;
-    }
+  .tabs-wrapper {
+    max-width: 528px;
+  }
 }
 @media (max-width: 538px) {
-    .tabs-wrapper {
-        max-width: 420px;
-    }
-    .card {
-        margin: 2px;
-        padding: 1px;
-        width: 108.8px;
-        height: 125px; 
-    }
-    .card div {
-        padding: 6px;
-    }
-    .card h3 {
-        font-size: 8px;
-    }
-    .pokemon-front {
-        margin-top: -6px;
-        margin-bottom: -4px;
-    }
+  .tabs-wrapper {
+    max-width: 420px;
+  }
+  .card {
+    margin: 2px;
+    padding: 1px;
+    width: 108.8px;
+    height: 125px;
+  }
+  .card div {
+    padding: 6px;
+  }
+  .card h3 {
+    font-size: 8px;
+  }
+  .pokemon-front {
+    margin-top: -6px;
+    margin-bottom: -4px;
+  }
 }
 @media (max-width: 410px) {
-    main {
-        margin-left: 8px;
-        margin-right: 8px;
-    }
-    .card-list {
-        margin-left: 8px;
-        margin-right: 8px;
-    }
-    .card {
-        margin: 2px;
-        padding: 1px;
-        width: 87px;
-        height: 100px; 
-    }
-    .pokemon-front {
-        width: 64px;
-        margin-top: 0px;
-        margin-bottom: -1px;
-    }
-    .card h3 {
-        font-size: 7px;
-    }
+  main {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .card-list {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .card {
+    margin: 2px;
+    padding: 1px;
+    width: 87px;
+    height: 100px;
+  }
+  .pokemon-front {
+    width: 64px;
+    margin-top: 0px;
+    margin-bottom: -1px;
+  }
+  .card h3 {
+    font-size: 7px;
+  }
 }

@@ -75,6 +75,12 @@ h1 {
   font-family: "Press Start 2P", cursive;
 }
 
+#pikachu_container {
+  display: flex;
+  place-content: center center;
+  transform: translateX(12px);
+}
+
 .poke-icon-wrapper {
   margin: 2rem 3rem 1rem 3rem;
   display: flex;

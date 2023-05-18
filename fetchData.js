@@ -3,8 +3,8 @@ export const pokeArr = [];
 async function fetchData() {
     try {
         for (let i = 1; i <= 251; i++) {
-            let data1 = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
-            let resp = await data1.json();
+            let data = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
+            let resp = await data.json();
             let pokeObj = {
                 id: resp.id,
                 name: resp.name,
@@ -18,7 +18,7 @@ async function fetchData() {
         console.log("[fetchData] Error:", err);
     }
     finally {
-        console.log("Data count:", pokeArr.length);
+        console.log("[fetchData] pokeArr length:", pokeArr.length);
     }
 }
 export default fetchData;

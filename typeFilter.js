@@ -6,7 +6,7 @@ let toggleCount = 0;
 let typeA = null;
 let typeB = null;
 
-function pickType() {
+function typeFilter() {
 
     tab[0].addEventListener('click', (event) => {
         if (event.target.classList.contains("tabs-wrapper")) return;
@@ -15,6 +15,7 @@ function pickType() {
         // console.log("EVENT.TARGET --> ", event.target);
         // console.log("EVENT.TARGET.ID --> ", event.target.id);
         // console.log("TRG --> ", trg);
+
         if (event.target.classList.contains("tab-border")) {
             event.target.classList.toggle("tab-border");
             if (typeB === trg) {
@@ -47,4 +48,4 @@ function pickType() {
     });
 }
 
-export default pickType;
+export default typeFilter;

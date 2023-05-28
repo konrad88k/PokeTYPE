@@ -1,5 +1,9 @@
-import { pokeArr } from "./fetchData.js";
+import data from './pokeData.json' assert { type: 'json' };
 import newCard from "./newCard.js";
+
+// load from generation 'I' only
+const pokeData = data.pokeData.slice(0, 251);
+console.log("L:", pokeData.length);
 
 function filter(A, B) {
 
@@ -11,9 +15,9 @@ function filter(A, B) {
         }
     }
     if (A === null && B === null) {
-        return pokeArr;
+        return pokeData;
     }
-    return pokeArr.filter(typeCondition);
+    return pokeData.filter(typeCondition);
 }
 
 const loadList = (a, b) => {

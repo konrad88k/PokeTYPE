@@ -84,18 +84,23 @@ main {
   margin-right: 1rem;
 }
 h1 {
-  margin: 3rem 0 1rem 0;
+  margin: 0 0 2rem 0;
+  padding-top: 3rem;
   text-align: center;
   color: $primary-color;
   font-family: "Press Start 2P", cursive;
 }
 #pikachu_container {
+  margin-top: 0.5rem;
   display: flex;
   place-content: center center;
   transform: translateX(12px);
 }
 .poke-icon-wrapper {
-  margin: 2rem 3rem 1rem 3rem;
+  position: relative;
+  width: 50%;
+  margin: 0 auto 0 auto;
+  height: 3rem;
   display: flex;
   place-content: center center;
 }
@@ -121,7 +126,7 @@ h1 {
   cursor: pointer;
   transition: scale 0.3s ease-in-out;
 }
-.hide {
+.hidden {
   display: none;
 }
 .tab:hover {
@@ -146,7 +151,7 @@ h1 {
   color: $primary-color;
   padding: 3px;
   cursor: pointer;
-  transition: scale 0.2s;
+  transition: opacity 0.2s;
 }
 .card div {
   @include polygon;
@@ -158,7 +163,7 @@ h1 {
   text-align: center;
 }
 .card:hover {
-  scale: 1.1;
+  opacity: 0.85;
 }
 .card h3 {
   margin: 0 auto;
@@ -199,6 +204,7 @@ footer div {
   text-align: center;
   font-family: "Press Start 2P", cursive;
   color: $primary-color;
+  font-size: small;
 }
 @media (max-width: 1338px) {
   .card {
@@ -213,10 +219,6 @@ footer div {
   .card {
     width: 136px;
     height: 156.3px;
-  }
-  .card:hover {
-    scale: 1;
-    opacity: 0.8;
   }
   .card div {
     padding: 12px;
@@ -255,18 +257,21 @@ footer div {
     margin-top: -6px;
     margin-bottom: -4px;
   }
+  footer div {
+    font-size: 12px;
+  }
 }
 @media (max-width: 410px) {
-  main {
-    margin-left: 8px;
-    margin-right: 8px;
-  }
+  // main {
+  //   margin-left: 8px;
+  //   margin-right: 8px;
+  // }
   .card-list {
     margin-left: 8px;
     margin-right: 8px;
   }
   .card {
-    margin: 2px;
+    margin: 4px;
     padding: 1px;
     width: 87px;
     height: 100px;
@@ -278,5 +283,8 @@ footer div {
   }
   .card h3 {
     font-size: 7px;
+  }
+  footer div {
+    font-size: 10px;
   }
 }

@@ -1,14 +1,11 @@
 // import createLoader from "./createLoader.js"
 
-import typeFilter from "./typeFilter.js";
-import loadList from "./loadList.js";
 import scroll from "./scroll.js";
+import tabSelection from "./tabSelection.js";
+import loadList from "./loadList.js";
 
 scroll();
-typeFilter();
+tabSelection();
 
 loadList(null, null); //pelna lista
-
-//clear card list
-// document.querySelector('.card-list').replaceChildren();
 

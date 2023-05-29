@@ -1,12 +1,12 @@
 import loadList from "./loadList.js";
+import showIcons from "./showIcons.js";
 
 const tab = document.querySelectorAll(".tabs-wrapper");
-
 let toggleCount = 0;
 let typeA = null;
 let typeB = null;
 
-function typeFilter() {
+function tabSelection() {
 
     tab[0].addEventListener('click', (event) => {
         if (event.target.classList.contains("tabs-wrapper")) return;
@@ -31,7 +31,7 @@ function typeFilter() {
             toggleCount += 1;
         }
 
-        //shading and unshading tabs 
+        //highlight tabs 
         if (toggleCount === 2) {
             for (let item of tab) {
                 if ((item.id.slice(0, -4) != typeA) && (item.id.slice(0, -4) != typeB)) {
@@ -45,7 +45,8 @@ function typeFilter() {
         }
 
         loadList(typeA, typeB);
+        showIcons(typeA, typeB);
     });
 }
 
-export default typeFilter;
+export default tabSelection;

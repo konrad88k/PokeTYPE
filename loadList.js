@@ -2,8 +2,8 @@ import data from './pokeData.json' assert { type: 'json' };
 import newCard from "./newCard.js";
 
 // load from generation 'I' only
-const pokeData = data.pokeData.slice(0, 251);
-console.log("L:", pokeData.length);
+// const pokeData = data.pokeData.slice(0, 251);
+const pokeData = data.pokeData.slice(0, 809);
 
 function filter(A, B) {
 
@@ -14,6 +14,8 @@ function filter(A, B) {
             return (((obj.type1 === A) || (obj.type2 === A)) && ((obj.type1 === B) || (obj.type2 === B)));
         }
     }
+
+    // display all cards if no tab selected
     if (A === null && B === null) {
         return pokeData;
     }

@@ -33,14 +33,14 @@ function tabSelection() {
 
         //highlight tabs 
         if (toggleCount === 2) {
-            for (let item of tab) {
-                if ((item.id.slice(0, -4) != typeA) && (item.id.slice(0, -4) != typeB)) {
-                    item.style.opacity = "0.5";
+            for (const child of tab[0].children) {
+                if ((child.id.slice(0, -4) !== typeA) && (child.id.slice(0, -4) !== typeB)) {
+                    child.style.opacity = "0.5";
                 }
             }
         } else if (toggleCount < 2) {
-            for (let item of tab) {
-                item.style.opacity = "1";
+            for (const child of tab[0].children) {
+                child.style.opacity = "1";
             }
         }
 

@@ -2,10 +2,11 @@
   "name": "poketype",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch styles/scss:styles/css"
+    "sass": "sass --watch src/styles/scss:dist/styles/css",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/konrad88k/poketype/issues"
   },
-  "homepage": "https://github.com/konrad88k/poketype#readme"
+  "homepage": "https://github.com/konrad88k/poketype#readme",
+  "dependencies": {
+    "webpack": "^5.85.0",
+    "webpack-cli": "^5.1.3"
+  }
 }
